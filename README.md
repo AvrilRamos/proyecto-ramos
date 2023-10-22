@@ -54,3 +54,12 @@ Para generar la documentación Javadoc para tu código, utiliza:
 make javadoc
 ```
 Esto creará la documentación en HTML en el directorio html/.
+
+
+## Ejecucion
+
+Luego de generar el .jar (`proyecto.jar`) debera correr 
+```
+java -jar proyecto.jar
+```
+para ejecutar el programa mediante la consola
