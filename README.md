@@ -22,6 +22,14 @@ raíz-del-proyecto/
 ## Compilación del Proyecto
 Para construir y compilar tu proyecto, puedes utilizar el Makefile proporcionado. Aquí tienes los objetivos Make disponibles:
 
+### Clonar
+Para clonar el repositorio 
+
+```
+git clone https://github.com/AvrilRamos/proyecto-ramos.git
+```
+Esto le creara una carpeta en su directorio local con el proyecto
+
 ### Limpieza
 Para limpiar el proyecto y eliminar archivos compilados y archivos JAR, utiliza:
 
