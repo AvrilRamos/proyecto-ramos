@@ -26,6 +26,8 @@ public class Principal {
             switch (option) {
                 case 1:
                     System.out.println("Ingrese los datos del producto:");
+                    System.out.print("ID: ");
+                    int id= (int) askForNumber(scanner);
                     System.out.print("Nombre: ");
                     String name = scanner.nextLine();
                     System.out.print("Precio: ");
@@ -33,7 +35,7 @@ public class Principal {
                     System.out.print("Cantidad: ");
                     int quantity = (int) askForNumber(scanner);
 
-                    Product newProduct = new Product(name, price, quantity);
+                    Product newProduct = new Product (id, name, price, quantity);
                     storage.addProduct(newProduct);
                     System.out.println("Producto agregado con éxito.");
                     break;

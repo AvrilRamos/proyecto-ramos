@@ -14,7 +14,14 @@ public class Storage {
 	}
 
 	public void addProduct(Product product){
+		if (!products.isEmpty()) product.setId(products.get(products.size()-1).getId()+1);
+		else product.setId(0);
 		products.add(product);
+		saveProducts();
+	}
+
+	public void borrar (Product product){
+		products.remove(product);
 		saveProducts();
 	}
 
@@ -26,7 +33,8 @@ public class Storage {
 		try{
 			FileWriter fw = new FileWriter("products.csv");
 			for(Product product : products){
-				fw.write(product.getName() + "," +
+				fw.write(product.getId() + ","+
+						product.getName() + "," +
 						product.getPrice() + "," +
 						product.getQuantity() + "\n");
 			}
@@ -40,12 +48,14 @@ public class Storage {
 		try{
 			File fichero = new File("products.csv");
 			// Crea el fichero si no existe
-			// nombre,precio,cantidad\nnombre,precio,cantidad
+			// id,nombre,precio,cantidad\nid,nombre,precio,cantidad
 			fichero.createNewFile();
 			Scanner sc = new Scanner(fichero);
 			sc.useDelimiter(",|\n");
 			while(sc.hasNext()){
-				Product product = new Product(sc.next(),
+				Product product = new Product (
+									Integer.parseInt(sc.next()),
+									(sc.next()),
 								    Double.parseDouble(sc.next()),
 								    Integer.parseInt(sc.next()));
 				products.add(product);
