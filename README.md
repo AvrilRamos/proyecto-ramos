@@ -67,7 +67,13 @@ Esto creará la documentación en HTML en el directorio html/.
 
 Luego de generar el .jar (`proyecto.jar`) debera correr 
 ```
+
 java -jar proyecto.jar
 ```
 para ejecutar el programa mediante la consola
+
+
+
+
+![class diagram](https://github.com/AvrilRamos/proyecto-ramos/assets/146078646/3dbac417-800f-418e-a5c9-2d6a0baa69a8)
 
