@@ -9,3 +9,5 @@ jar:compilar
 	jar cvfm proyecto.jar manifest -C bin .
 javadoc:compilar
 	find src -type f -name "*.java" | xargs javadoc -d html -encoding utf-8 -docencoding utf-8 -charset utf-8
+ejecutar:compilar
+	java -cp bin aplicacion.Principal
