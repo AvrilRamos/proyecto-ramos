@@ -49,7 +49,6 @@ Este objetivo primero limpia el proyecto y luego compila el código fuente Java,
 ### Creación de un JAR
 Para crear un archivo JAR a partir de las clases compiladas, ejecuta:
 
-
 ```
 make jar
 ```

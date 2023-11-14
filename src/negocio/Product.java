@@ -5,9 +5,16 @@ public class Product {
     private String name;
     private double price;
     private int quantity;
-    
-    public Product(int id, String name, double price, int quantity) {
+
+    public Product (int id, String name, double price, int quantity) {
         this.id = id;
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+    
+    public Product (String name, double price, int quantity) {
+        this.id = 0;
         this.name = name;
         this.price = price;
         this.quantity = quantity;
@@ -59,7 +66,7 @@ public class Product {
      */
     @Override
     public String toString() {
-        return "\nId:" + id + "Producto: " + name + "\nPrecio unitario: " + price + " euros\nCantidad: " + quantity + "\n";
+        return "Id:" + id + "\nProducto: " + name + "\nPrecio unitario: " + price + " euros\nCantidad: " + quantity + "\n";
 
     }
 }

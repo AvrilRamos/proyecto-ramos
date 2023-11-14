@@ -15,14 +15,30 @@ public class Storage {
 
 	public void addProduct(Product product){
 		if (!products.isEmpty()) product.setId(products.get(products.size()-1).getId()+1);
-		else product.setId(0);
 		products.add(product);
 		saveProducts();
 	}
 
-	public void borrar (Product product){
+	public void deleteProduct(Product product){
 		products.remove(product);
 		saveProducts();
+	}
+
+	public void modifyProduct(Product product, String newName, double newPrice, int newQuantity) {
+        if (product != null && newQuantity >= 0) {
+			product.setName(newName);
+			product.setPrice(newPrice);
+            product.setQuantity(newQuantity);
+            saveProducts();}
+	}
+
+	public Product getProductById(int id) {
+		for (Product product : products){
+			if (product.getId() == id) {
+				return product;
+			}
+		}
+		return null;
 	}
 
 	public ArrayList<Product> getProducts(){
